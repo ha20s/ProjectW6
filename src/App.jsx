@@ -21,8 +21,8 @@ function App() {
         <Users passingSubmitNames={passingName} /> 
       ) : (
         <div className="flex flex-col md:flex-row justify-around p-10">
-          <ChatTemplate name={names.name1} passingChat={passingChat} messages={messages} />
-          <ChatTemplate name={names.name2} passingChat={passingChat} messages={messages} />
+          <ChatTemplate name={names.name1} secName={names.name2} passingChat={passingChat} messages={messages} />
+          <ChatTemplate name={names.name2} secName={names.name1} passingChat={passingChat} messages={messages} />
         </div>
       )}
     </div>

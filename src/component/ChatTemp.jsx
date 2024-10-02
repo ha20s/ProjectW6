@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ChatTemplate({ name, passingChat, messages }) {
+function ChatTemplate({ name, passingChat, messages  , secName}) {
   const [mess, setMess] = useState('');
 
   const addMess = () => {
@@ -13,7 +13,7 @@ function ChatTemplate({ name, passingChat, messages }) {
   return (
     <div className="p-4 w-full max-w-sm bg-white border border-gray-300 rounded-md">
       <div>
-        <div className="p-2 font-bold">{name}'s Mobile</div>
+        <div className="p-2 font-bold">{secName}'s Chat</div>
         <div className="h-[70vh] overflow-y-auto mb-4 border p-2">
           {messages.map((message, index) => (
             <div
@@ -28,7 +28,7 @@ function ChatTemplate({ name, passingChat, messages }) {
             onChange={(e) => setMess(e.target.value)} placeholder="Type your message" />
           <button
             className="border-2 rounded border-cyan-800 p-2"
-            onClick={addMess} > Send</button>
+            onClick={addMess} > Send </button>
         </div>
       </div>
     </div>
